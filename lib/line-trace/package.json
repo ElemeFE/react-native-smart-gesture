@@ -1,0 +1,6 @@
+{
+  "name": "react-native-line-trace",
+  "version": "0.0.1",
+  "main": "./lineTrace.js",
+  "private": false
+}
