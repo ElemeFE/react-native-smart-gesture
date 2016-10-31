@@ -1,0 +1,20 @@
+{
+  "name": "react-native-smart-gesture",
+  "version": "1.0.0",
+  "description": "> Android默认就包含ART库，IOS需要单独添加依赖库。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elemefe/react-native-smart-gesture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elemefe/react-native-smart-gesture/issues"
+  },
+  "homepage": "https://github.com/elemefe/react-native-smart-gesture#readme"
+}

@@ -9,7 +9,7 @@
 ## 使用方法
 作为独立的组件使用，也可以作为父容器来使用：
 ```jsx
-import SmartGesture from 'SmartGestureRn';
+import SmartGesture from 'react-native-smart-gesture';
 
 render() {
   return (
@@ -39,3 +39,12 @@ lineWidth  | Number   | 4
 gestures   | Array    | -
 onSwipe    | Function | -
 onGesture  | Function | -
+
+## Contribution
+
+请在提交 PR 前阅读我们的[贡献指南](./.github/CONTRIBUTING_zh-cn.md)
+
+## License
+
+MIT
+
