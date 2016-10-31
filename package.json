@@ -1,6 +1,6 @@
 {
   "name": "react-native-smart-gesture",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "> Android默认就包含ART库，IOS需要单独添加依赖库。",
   "main": "index.js",
   "scripts": {
