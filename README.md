@@ -1,36 +1,54 @@
-## 使用前添加依赖
+# react-native-smart-gesture
+This realization of [smart-gesture](https://github.com/ElemeFE/smart-gesture) for React Native。
+
+## 添加依赖
 > Android默认就包含ART库，IOS需要单独添加依赖库。
 
-1. 右键点击项目 -> ‘Add Files to ProjectName -> 选择 根目录/node_modules/react-native/Libraries/ART/ART.xcodeproj’
-2. 在 Xcode 中将文件 ART.xcodeproj/Products/libART.a 添加(拖动)到 Build Phases 菜单 下的 Linked Frameworks and Libraries
+[操作步骤](./doc/dependency.md)
 
-![Imgur](http://i.imgur.com/2dB4R0m.png)
+## 安装
+```bash
+npm install -S react-native-smart-gesture
+```
 
 ## 使用方法
 作为独立的组件使用，也可以作为父容器来使用：
-
-```bash
-npm install -S react-native-smart-gesture 
-```
-
 ```jsx
+// index.ios.js
+
+import React from 'react';
+import { AppRegistry, View, Text } from 'react-native';
 import SmartGesture from 'react-native-smart-gesture';
 
-render() {
-  return (
-    <View>
-      <SmartGesture onGesture={this._onGesture.bind(this)} height={300} onSwipe={this._onSwipe.bind(this)}/>
-      <SmartGesture onGesture={this._onGesture.bind(this)} lineColor={'#000'}>
-        <Image source={{uri: 'https://placeimg.com/200/200/any'}} style={{width: 200,height:200,borderWidth:2}} />
-      </SmartGesture>
-    </View>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      result: null,
+    };
+  }
+
+  _onGesture(result) {
+    this.setState({ result });
+  }
+
+  render() {
+    return (
+      <View>
+        <SmartGesture onGesture={this._onGesture.bind(this)} />
+        <Text>{JSON.stringify(this.state.result)}</Text>
+      </View>
+    );
+  }
 }
+
+AppRegistry.registerComponent('AwesomeProject', () => App);
 ```
 
+[更多示例](./example)
 
 ## 说明
-- android 上使用 `SmartGesture` , 必须把 `SmartGesture` 组件放在该页面的根元素内。[详细](./android.md)。
+- android 上使用 `SmartGesture` , 必须把 `SmartGesture` 组件放在该页面的根元素内。[详细](./doc/android.md)。
 - `SmartGesture` 组件默认宽度为父组件的宽度。
 
 ## props
@@ -52,4 +70,3 @@ onGesture  | Function | -
 ## License
 
 MIT
-
